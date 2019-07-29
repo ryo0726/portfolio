@@ -94,6 +94,7 @@ div.parallax{
   height:293px;
   width: 293px;
   overflow:hidden;
+  position: relative;
 }
 .work_flex a:nth-child(3n+2){
   margin:0 20px 20px 20px;
@@ -102,10 +103,24 @@ div.parallax{
   height:293px;
   max-width: 100%;
   transition:0.3s all;
-  filter: blur(1px);
+  filter: blur(2px);
   box-shadow: 0 0 15px #666;
 }
 .work_flex img:hover{
   transform: scale(1.2);
   filter: blur(0px);
+}
+.work_flex a:before{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  content:"work";
+  font-size: 30px;
+  color:#fff;
+  text-shadow: 0 0 15px;
+  z-index: 1;
+}
+.work_flex a:hover:before{
+  content:"";
 }
